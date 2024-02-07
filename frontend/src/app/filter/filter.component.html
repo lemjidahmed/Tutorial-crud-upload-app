@@ -1,0 +1,21 @@
+<div class="filter-component">
+  <span>Filter:   </span>
+  <label>
+    <input type="radio" name="filter" value="all"
+    [(ngModel)]="selectedRadioButtonValue"
+    (change)="onRadioButtonSelectionChanged()">
+    {{'All('+all+')'}}
+  </label>
+  <label>
+    <input type="radio" name="filter" value="published"
+    [(ngModel)]="selectedRadioButtonValue"
+    (change)="onRadioButtonSelectionChanged()">
+    {{'Published('+published+')'}}
+  </label>
+  <label>
+    <input type="radio" name="filter" value="pending"
+    [(ngModel)]="selectedRadioButtonValue"
+    (change)="onRadioButtonSelectionChanged()">
+    {{'Pending('+pending+')'}}
+  </label>
+</div>
