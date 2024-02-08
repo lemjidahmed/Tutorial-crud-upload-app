@@ -1,5 +1,8 @@
 package com.pfe.springbootserver;
 
+import com.pfe.springbootserver.service.FilesStorageService;
+import jakarta.annotation.Resource;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -10,10 +13,17 @@ import org.springframework.web.filter.CorsFilter;
 import java.util.Arrays;
 
 @SpringBootApplication
-public class SpringBootServerApplication {
-
+public class SpringBootServerApplication implements CommandLineRunner {
+	@Resource
+	FilesStorageService storageService;
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootServerApplication.class, args);
+	}
+
+	@Override
+	public void run(String... arg) throws Exception {
+//    storageService.deleteAll();
+		storageService.init();
 	}
 
 	@Bean

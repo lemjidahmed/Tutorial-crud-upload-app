@@ -24,4 +24,7 @@ public class Tutorial {
     @Column(name = "published")
     private boolean published;
 
+    @Column(name ="file")
+    private String fileName;
+
 }

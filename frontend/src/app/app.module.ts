@@ -10,6 +10,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import { AddTutorialComponent } from './add-tutorial/add-tutorial.component';
 import { FilterComponent } from './filter/filter.component';
+import { UploadFilesComponent } from './upload-files/upload-files.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { FilterComponent } from './filter/filter.component';
     TutorialDetailsComponent,
     AddTutorialComponent,
     FilterComponent,
+    UploadFilesComponent,
   ],
     imports: [
         BrowserModule,
